@@ -9,10 +9,10 @@ const HeartIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" heigh
 const MapPinIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 mb-2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>;
 
 export const NAV_ITEMS = [
-    { id: 'about', title: 'About', icon: <StarIcon />, color: 'bg-panel-about', bgImage: 'https://images.unsplash.com/photo-1475113548554-5a36f1f523d6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { id: 'services', title: 'Services', icon: <BriefcaseIcon />, color: 'bg-panel-services', bgImage: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { id: 'portfolio', title: 'Portfolio', icon: <HeartIcon />, color: 'bg-panel-portfolio', bgImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { id: 'contact', title: 'Contact', icon: <MapPinIcon />, color: 'bg-panel-contact', bgImage: 'https://images.unsplash.com/photo-1520208422220-d12a224a7391?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { id: 'about', title: 'About', icon: <StarIcon />, color: 'bg-panel-about', bgImage: '/assets/about-bg.jpg' },
+    { id: 'services', title: 'Services', icon: <BriefcaseIcon />, color: 'bg-panel-services', bgImage: '/assets/services-bg.jpg' },
+    { id: 'portfolio', title: 'Portfolio', icon: <HeartIcon />, color: 'bg-panel-portfolio', bgImage: '/assets/portfolio-bg.jpg' },
+    { id: 'contact', title: 'Contact', icon: <MapPinIcon />, color: 'bg-panel-contact', bgImage: '/assets/contact-bg.jpg' },
 ];
 
 const MobileIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-10 w-10 text-brand-primary"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>;
@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'E-commerce Platform',
         description: 'A full-featured e-commerce website with product listings, a shopping cart, and a checkout process. Built with the MERN stack.',
-        imageUrl: 'https://picsum.photos/seed/project1/400/300',
+        imageUrl: '/assets/project1.jpg',
         projectUrl: '#',
         sourceUrl: '#',
         tags: ['React', 'Node.js', 'MongoDB', 'Express']
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'Task Management App',
         description: 'A Kanban-style task management application that allows users to create, organize, and track their tasks through different stages.',
-        imageUrl: 'https://picsum.photos/seed/project2/400/300',
+        imageUrl: '/assets/project2.jpg',
         projectUrl: '#',
         sourceUrl: '#',
         tags: ['React', 'TypeScript', 'Tailwind CSS']
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'Portfolio Website',
         description: 'This very portfolio website, built to showcase my skills and projects in a clean, modern, and responsive design.',
-        imageUrl: 'https://picsum.photos/seed/project3/400/300',
+        imageUrl: '/assets/project3.jpg',
         projectUrl: '#',
         sourceUrl: '#',
         tags: ['React', 'Tailwind CSS', 'Vite']
@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
     {
         title: 'Weather Dashboard',
         description: 'A simple and elegant weather dashboard that provides current weather conditions and a 5-day forecast for any city.',
-        imageUrl: 'https://picsum.photos/seed/project4/400/300',
+        imageUrl: '/assets/project4.jpg',
         projectUrl: '#',
         sourceUrl: '#',
         tags: ['JavaScript', 'API', 'HTML', 'CSS']
