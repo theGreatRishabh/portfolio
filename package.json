@@ -1,6 +1,6 @@
 {
-  "name": "react-portfolio",
-  "homepage": "https://thegreatrishabh.github.io/react-portfolio",
+  "name": "tgr-portfolio",
+  "homepage": "https://thegreatrishabh.github.io/portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
