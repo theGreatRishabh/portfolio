@@ -5,7 +5,7 @@ const About: React.FC = () => {
     <div className="grid md:grid-cols-5 gap-12 items-center py-12">
       <div className="md:col-span-2">
         <img
-          src="/react-portfolio/assets/dp.jpeg"
+          src="/portfolio/assets/dp.jpeg"
           alt="Rishabh"
           className="rounded-lg shadow-lg w-full h-auto object-cover border-4 border-brand-secondary"
         />
