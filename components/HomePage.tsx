@@ -81,6 +81,7 @@ const HomePage: React.FC<HomePageProps> = ({ setActiveSection, isExiting }) => {
           <h1 className="text-5xl md:text-6xl font-bold mb-4">I'm Rishabh</h1>
           <p className="text-lg text-gray-300 mb-8 max-w-md">
             For over 8 years I've worked with companies all around the globe.
+            (Some parts are under construction)
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
             <button

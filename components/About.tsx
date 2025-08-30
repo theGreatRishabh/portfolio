@@ -19,10 +19,11 @@ const About: React.FC = () => {
           and building beautiful, efficient software.
         </p>
         <p>
-          I specialize in the MERN stack (MongoDB, Express, React, Node.js) but
-          I'm always eager to learn new technologies and frameworks. I thrive in
-          collaborative environments and am dedicated to writing clean,
-          maintainable, and scalable code.
+          I specialize in hybrid mobile app development using React Native,
+          Ionic and Capacitor. My goal is to create seamless and engaging user
+          experiences across all devices. I have a strong foundation in both
+          front-end and back-end technologies, allowing me to build complete
+          solutions from the ground up.
         </p>
         <p>
           When I'm not coding, you can find me exploring new tech blogs,
