@@ -41,7 +41,7 @@ export default async function handler(
     const data = {
       service_id: EMAILJS_SERVICE_ID,
       template_id: EMAILJS_TEMPLATE_ID,
-      user_id: EMAILJS_PUBLIC_KEY,
+      
       template_params: req.body, // Pass the entire form body as template parameters
       accessToken: EMAILJS_PRIVATE_KEY, // Use the private key for server-side requests
     };
