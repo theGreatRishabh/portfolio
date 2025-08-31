@@ -76,28 +76,28 @@ export const NAV_ITEMS = [
     title: "About",
     icon: <StarIcon />,
     color: "bg-panel-about",
-    bgImage: "/portfolio/assets/about.jpg",
+    bgImage: "/about.jpg",
   },
   {
     id: "services",
     title: "Services",
     icon: <BriefcaseIcon />,
     color: "bg-panel-services",
-    bgImage: "/portfolio/assets/service.jpg",
+    bgImage: "/service.jpg",
   },
   {
     id: "portfolio",
     title: "Portfolio",
     icon: <HeartIcon />,
     color: "bg-panel-portfolio",
-    bgImage: "/portfolio/assets/portfolio.jpg",
+    bgImage: "/portfolio.jpg",
   },
   {
     id: "contact",
     title: "Contact",
     icon: <MapPinIcon />,
     color: "bg-panel-contact",
-    bgImage: "/portfolio/assets/contact.jpg",
+    bgImage: "/contact.jpg",
   },
 ];
 
@@ -296,7 +296,7 @@ export const PROJECTS: Project[] = [
     title: "E-commerce Platform",
     description:
       "A full-featured e-commerce website with product listings, a shopping cart, and a checkout process. Built with the MERN stack.",
-    imageUrl: "/portfolio/assets/project1.jpg",
+    imageUrl: "/project1.jpg",
     projectUrl: "#",
     sourceUrl: "#",
     tags: ["React", "Node.js", "MongoDB", "Express"],
@@ -305,7 +305,7 @@ export const PROJECTS: Project[] = [
     title: "Task Management App",
     description:
       "A Kanban-style task management application that allows users to create, organize, and track their tasks through different stages.",
-    imageUrl: "/portfolio/assets/project2.jpg",
+    imageUrl: "/project2.jpg",
     projectUrl: "#",
     sourceUrl: "#",
     tags: ["React", "TypeScript", "Tailwind CSS"],
@@ -314,7 +314,7 @@ export const PROJECTS: Project[] = [
     title: "Portfolio Website",
     description:
       "This very portfolio website, built to showcase my skills and projects in a clean, modern, and responsive design.",
-    imageUrl: "/portfolio/assets/project3.jpg",
+    imageUrl: "/project3.jpg",
     projectUrl: "#",
     sourceUrl: "#",
     tags: ["React", "Tailwind CSS", "Vite"],
@@ -323,7 +323,7 @@ export const PROJECTS: Project[] = [
     title: "Weather Dashboard",
     description:
       "A simple and elegant weather dashboard that provides current weather conditions and a 5-day forecast for any city.",
-    imageUrl: "/portfolio/assets/project4.jpg",
+    imageUrl: "/project4.jpg",
     projectUrl: "#",
     sourceUrl: "#",
     tags: ["JavaScript", "API", "HTML", "CSS"],
