@@ -19,6 +19,7 @@
     "@tailwindcss/postcss": "^4.1.12",
     "@types/node": "^22.14.0",
     "@vercel/node": "^5.3.17",
+    "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.21",
     "gh-pages": "^3.2.3",
     "postcss": "^8.5.6",
