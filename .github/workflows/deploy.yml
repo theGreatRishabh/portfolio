@@ -23,10 +23,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-            - name: Build project for GitHub Pages
+                  - name: Install dependencies
+        run: npm ci
+
+      - name: Debugging
+        run: |
+          ls -la
+          node -v
+          npm -v
+          env
+
+      - name: Build project for GitHub Pages
         env:
           GITHUB_PAGES: "true"
-        run: npm run build
+        run: npm run build --verbose
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
