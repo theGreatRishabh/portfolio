@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
     setSubmissionStatus("sending");
 
     try {
-      const response = await fetch("/src/api/send-email", {
+      const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -148,7 +148,7 @@ const Contact: React.FC = () => {
           onChange={handleChange}
           placeholder="Your Name"
           required
-          className="w-full bg-brand-secondary p-3 rounded-md border border-brand-secondary focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all"
+          className="w-full bg-brand-secondary p-3 rounded-md border border-brand-secondary focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all text-brand-bg"
         />
         <input
           type="email"
@@ -157,7 +157,7 @@ const Contact: React.FC = () => {
           onChange={handleChange}
           placeholder="Your Email"
           required
-          className="w-full bg-brand-secondary p-3 rounded-md border border-brand-secondary focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all"
+          className="w-full bg-brand-secondary p-3 rounded-md border border-brand-secondary focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all text-brand-bg"
         />
         <textarea
           name="message"
@@ -166,7 +166,7 @@ const Contact: React.FC = () => {
           placeholder="Your Message"
           rows={5}
           required
-          className="w-full bg-brand-secondary p-3 rounded-md border border-brand-secondary focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all"
+          className="w-full bg-brand-secondary p-3 rounded-md border border-brand-secondary focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all text-brand-bg"
         ></textarea>
         <button
           type="submit"
