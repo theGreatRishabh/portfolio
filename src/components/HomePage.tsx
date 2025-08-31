@@ -73,7 +73,7 @@ const HomePage: React.FC<HomePageProps> = ({ setActiveSection, isExiting }) => {
       <div
         className={leftPanelClasses}
         style={{
-          backgroundImage: "url('/portfolio/assets/home-bg.jpg')",
+          backgroundImage: "url('/home-bg.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
