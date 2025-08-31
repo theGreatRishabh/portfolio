@@ -4,12 +4,14 @@ import { defineConfig, loadEnv } from "vite";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, ".", "");
+  const isGitHubPages = process.env.GITHUB_PAGES === "true";
+
   return {
-    base: "/portfolio/",
+    base: isGitHubPages ? "/portfolio/" : "/", // ✅ only one base
     plugins: [react()],
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "."),
+        "@": path.resolve(__dirname, "./src"), // better to alias src instead of root
       },
     },
   };
