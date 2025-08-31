@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // This lets TypeScript know that 'emailjs' is available on the global window object from the CDN script.
-declare const emailjs: any;
+// We are now using a secure serverless function, so the client-side emailjs script is no longer needed.
 
 const ContactInfoItem: React.FC<{ icon: React.ReactNode; text: string }> = ({
   icon,
@@ -31,44 +31,39 @@ const Contact: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setSubmissionStatus("sending");
 
-    // --- EmailJS Integration ---
-    // 1. Sign up for a free account at https://www.emailjs.com
-    // 2. Create an email service and a template.
-    // 3. In your EmailJS template, use {{name}}, {{email}}, and {{message}} to access the form data.
-    // 4. To get the requested subject line "TGR service | Email | <Name of the sender>",
-    //    set the subject in your EmailJS template to: TGR service | Email | {{name}}
-    // 5. Replace the placeholder values below with your actual keys.
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const serviceID = "YOUR_SERVICE_ID"; // Replace with your EmailJS Service ID
-    const templateID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS Template ID
-    const publicKey = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS Public Key
-
-    const templateParams = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    emailjs
-      .send(serviceID, templateID, templateParams, publicKey)
-      .then(() => {
+      if (response.ok) {
         setSubmissionStatus("success");
         setFormData({ name: "", email: "", message: "" });
         // Reset the status after a few seconds
         setTimeout(() => setSubmissionStatus("idle"), 4000);
-      })
-      .catch((error: any) => {
-        console.error("EmailJS error:", error);
+      } else {
+        const errorData = await response.json();
+        console.error("Failed to send email:", errorData.message);
         setSubmissionStatus("error");
         // Reset the status after a few seconds
         setTimeout(() => setSubmissionStatus("idle"), 4000);
-      });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmissionStatus("error");
+      // Reset the status after a few seconds
+      setTimeout(() => setSubmissionStatus("idle"), 4000);
+    }
   };
 
   return (
