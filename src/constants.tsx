@@ -1,5 +1,4 @@
 import React from "react";
-// Fix: Import the Skill type.
 import type { Project, Service, Skill } from "./types";
 
 // Icons for Nav Items
@@ -174,7 +173,6 @@ export const SERVICES: Service[] = [
   },
 ];
 
-// Fix: Add SKILLS constant which was missing.
 const ReactIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
